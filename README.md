@@ -2,6 +2,7 @@
 <p align="center">
   <a href="https://github.com/yzyyz1387/nwafu"><img src="https://socialify.git.ci/yzyyz1387/nwafu/image?font=Inter&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Light" width="500" height="auto" alt="nonebot"></a>
 </p>
+# 面向西农的gits实践仓库
 
 ## 这是什么
 这是一个存放与西农有关项目的仓库，诚邀各路大神/小白参与，也可以在此联系gayhub的各种操作,欢迎pr,欢迎issue  
