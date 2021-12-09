@@ -19,3 +19,6 @@ git clone https://github.com/yzyyz1387/nwafu.git
 ├   └─pwd.js :  加密密码js,在登录程序中掉被调用  
 ├─others : 期待您的参与  
 ├   └─xxxxxx : xxxxxxxx  
+
+
+采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可
