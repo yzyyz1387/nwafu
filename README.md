@@ -22,4 +22,6 @@ git clone https://github.com/yzyyz1387/nwafu.git
 ├   └─xxxxxx : xxxxxxxx  
 
 
-采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可
+上传项目请新建文件夹
+
+采用知识署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议进行许可
