@@ -2,6 +2,7 @@
 <p align="center">
   <a href="https://github.com/yzyyz1387/nwafu"><img src="https://socialify.git.ci/yzyyz1387/nwafu/image?font=Inter&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Light" width="500" height="auto" alt="nonebot"></a>
 </p>
+
 # 面向西农的gits实践仓库
 
 ## 这是什么
