@@ -13,7 +13,7 @@ git clone https://github.com/yzyyz1387/nwafu.git
 ```
 
 ## 目录：  
-├─login : 西农最新统一认证系统登录  
+├─login : 西农最新统一认证系统登录 (可登录，未完善) 
 ├   └─login.py : 登录程序  
 ├   └─pwd.js :  加密密码js,在登录程序中掉被调用  
 ├─others : 期待您的参与  
