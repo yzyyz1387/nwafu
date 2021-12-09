@@ -6,7 +6,13 @@
 ## 这是什么
 这是一个存放与西农有关项目的仓库，也可以在此联系gayhub的各种操作
 
-目录：  
+## 拉取仓库
+
+```
+git clone https://github.com/yzyyz1387/nwafu.git
+```
+
+## 目录：  
 ├─login : 西农最新统一认证系统登录  
 ├   └─login.py : 登录程序  
 ├   └─pwd.js :  加密密码js,在登录程序中掉被调用  
