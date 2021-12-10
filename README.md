@@ -20,6 +20,8 @@ git clone https://github.com/yzyyz1387/nwafu.git
 ├   └─pwd.js :  加密密码js,在登录程序中掉被调用  
 ├─math.pi : 与派相关  
 ├   └─doc_for_u.jpg : 派的青春  
+├─feiyu : 飞鱼  
+├   └─yu.jpg : 是鱼  
 ├─others : 期待您的参与  
 ├   └─xxxxxx : xxxxxxxx  
 
