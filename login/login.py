@@ -38,18 +38,26 @@ context1 = execjs.compile(js_from_file('pwd.js'))
 
 #头部代理
 headers = {
-    'Connection': 'keep-alive',
+     'Connection': 'keep-alive',
     'Pragma': 'no-cache',
     'Cache-Control': 'no-cache',
+    'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Microsoft Edge";v="98"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
     'Upgrade-Insecure-Requests': '1',
-    'Origin': 'http://authserver.nwafu.edu.cn',
+    'Origin': 'https://authserver.nwafu.edu.cn',
     'Content-Type': 'application/x-www-form-urlencoded',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4688.0 Safari/537.36 Edg/97.0.1069.0',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4741.0 Safari/537.36 Edg/98.0.1100.3',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-    'Referer': 'http://authserver.nwafu.edu.cn/authserver/login?service=http%3A%2F%2Fauthserver.nwafu.edu.cn%2Fauthserver%2Findex.do',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-User': '?1',
+    'Sec-Fetch-Dest': 'document',
+    'Referer': 'https://authserver.nwafu.edu.cn/authserver/login?service=https%3A%2F%2Fnewehall.nwafu.edu.cn%3A443%2Flogin%3Fservice%3Dhttps%3A%2F%2Fnewehall.nwafu.edu.cn%2Fywtb-portal%2FLite%2Findex.html%23%2Finformation_center',
     'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
 }
-params = ( ('service', 'http://authserver.nwafu.edu.cn/authserver/index.do'),)
+
+params = ( ('service', 'https://newehall.nwafu.edu.cn:443/login?service=https://newehall.nwafu.edu.cn/ywtb-portal/Lite/index.html#/information_center'),)
 
 def login(username,pwdtext):
     """
@@ -61,8 +69,8 @@ def login(username,pwdtext):
     #如果cookies文件夹不存在则创建该文件夹
     if os.path.exists(cookie_path)==False:
         os.mkdir(cookie_path)
-    url="http://authserver.nwafu.edu.cn/authserver/login?service=http%3A%2F%2Fauthserver.nwafu.edu.cn%2Fauthserver%2Findex.do"
-    #打开网页获取源码并保会话
+    url="https://authserver.nwafu.edu.cn/authserver/login?service=https%3A%2F%2Fnewehall.nwafu.edu.cn%3A443%2Flogin%3Fservice%3Dhttps%3A%2F%2Fnewehall.nwafu.edu.cn%2Fywtb-portal%2FLite%2Findex.html%23%2Finformation_center"
+    #打开网页获取源码并保持会话
     html=req.get(url,headers=headers,verify = False).text
     #定位加密信息
     key=re.compile(r"id=.*?value=\"(.*?)\"")
