@@ -122,7 +122,6 @@ def login(username,pwdtext):
     except Exception as err:
         print("发生错误：", err)
 
-
 if __name__ == '__main__':
     user=input("username:")
     pwd = input("pass:")
