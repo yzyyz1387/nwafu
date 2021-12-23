@@ -5,15 +5,13 @@
 # @Email   :  youzyyz1384@qq.com
 # @File    : login.py
 # @Software: PyCharm
-import sys,io
+
 import execjs
 import re
 import requests
 import os
 from os.path import dirname
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gb18030')
+
 req=requests.session()
 cookie_path=dirname(__file__)+"/cookies"
 def get_des_psswd(data, key):
@@ -92,7 +90,7 @@ def login(username,pwdtext):
     }
     #尝试登录
     try:
-        response_ = req.post('http://authserver.nwafu.edu.cn/authserver/login', headers=headers, params=params, data=data, verify=False)
+        response_ = req.post('http://authserver.nwafu.edu.cn/authserver/login', headers=headers, params=params, data=data)
         response=response_.text
         if "登录" not in response and "冻结" not in response:
             print("登陆成功")
