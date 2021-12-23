@@ -10,3 +10,5 @@
 - html2png为截图实现，入口：`save_image(url, title)`  
   - url: 链接
   - title: 欲保存的文件名
+- 请注意，图片在linux环境中需要修改路径 ：`__init__.py` 中的两处 `await news.send(MessageSegment.image..`
+  - 值得注意的是，发送图片相对路径，是相对于go-cqhttp的路径，你可以永远相信绝对路径  
