@@ -48,7 +48,6 @@ async def jwnewstime():
         count+=1
         if count<6:
             if i not in cachetext:
-                print(i, dic[i])
                 for g in groups:
                     await nonebot.get_bot().send_group_msg(group_id=g, message="有新通知啦：\n%s\n%s" % (i,dic[i]))
                 with open(text_path, "w", encoding="utf-8") as txt:
