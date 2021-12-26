@@ -1,0 +1,34 @@
+ {
+
+
+
+
+
+    "123456789":[{
+
+        'password':'123456798',
+        'address':'陕西省咸阳xxxxxxx街道',
+        'area':'陕西省咸阳市xxx区',
+        'city':'咸阳',
+        'province':'陕西',
+        'district':'杨陵',
+        'sfzx':'1',
+        'lng':'经度',
+        'lat':'纬度',
+        'adcode':'行政区划代码',    }],
+        
+        
+        
+    "1234567890":[{
+
+        'password':'123456798',
+        'address':'陕西省咸阳xxxxxxx街道',
+        'area':'陕西省咸阳市xxx区',
+        'city':'咸阳',
+        'province':'陕西',
+        'district':'杨陵',
+        'sfzx':'1',
+        'lng':'经度',
+        'lat':'纬度',
+        'adcode':'行政区划代码',    }],
+}
