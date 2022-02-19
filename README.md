@@ -21,6 +21,9 @@ git clone https://github.com/yzyyz1387/nwafu.git
 ├   └─doc_for_u.jpg : 派的青春  
 ├─feiyu : 飞鱼  
 ├   └─yu.jpg : 是鱼  
+├─daka : 西农健康打卡  
+├   └─dks.py : 主程序
+├   └─1.txt : 数据文件
 ├─others : 期待您的参与  
 ├   └─xxxxxx : xxxxxxxx  
 
