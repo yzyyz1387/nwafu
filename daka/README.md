@@ -1,5 +1,5 @@
 ## 批量打卡项目
-
+- 环境python3.6+
 - 主文件 `dks.py`
 - 数据文件 `1.txt`
 - 获取经纬度及行政区划代码：`https://apis.map.qq.com/jsapi?qt=geoc&addr=地名`

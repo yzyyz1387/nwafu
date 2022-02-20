@@ -5,15 +5,11 @@
 # @Email   :  youzyyz1384@qq.com
 # @File    : 打卡s.py
 # @Software: PyCharm
-import urllib.request
-import urllib.parse
 import http.cookiejar
-import requests
-import time
-import chardet
-import json
-import codecs
 import os
+import time
+import urllib.parse
+import urllib.request
 from os.path import dirname
 
 date = time.strftime('%Y%m%d')
@@ -27,7 +23,6 @@ headers = {'authority': 'app.nwafu.edu.cn', 'pragma': 'no-cache', 'cache-control
            'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'navigate',
            'referer': 'https://app.nwafu.edu.cn/site/applicationSquare/index?sid=8',
            'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7', }
-############################################################
 
 infor = open("./1.txt", encoding='utf-8', errors='ignore')
 infor = eval(infor.read())
@@ -149,8 +144,8 @@ for sn in infor:
         'password': infor[sn][0]['password'],
     }
     postdata = urllib.parse.urlencode(values).encode()
-    if os.path.exists(dirname(__file__)+'/cookies/')==False:
-        os.mkdir(dirname(__file__)+'/cookies/')
+    if not os.path.exists(dirname(__file__) + '/cookies/'):
+        os.mkdir(dirname(__file__) + '/cookies/')
     # 设置储存cookies的文件
     cookie_filename = './cookies/' + sn + 'cookie_jar.txt'
     cookie_jar = http.cookiejar.MozillaCookieJar(cookie_filename)
@@ -175,16 +170,10 @@ for sn in infor:
         dkCount += 1
         time.sleep(1)
     elif "为空" in final:
-        print(sn,"信息不能为空")
-        errorCount+=1
+        print(sn, "信息不能为空")
+        errorCount += 1
     else:
         print(sn, "账号密码不匹配")
         errorPass += 1
-# except:
-#     errorCount+=1
-#     continue
-
 
 print("完成,打卡数：", dkCount, "错误数：", errorCount, "账号密码错误：", errorPass)
-
-############################################################
