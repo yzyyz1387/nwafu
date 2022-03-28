@@ -11,10 +11,19 @@ from pyppeteer import launch
 
 
 async def save_image(url, title):
-    if os.path.exists(dirname(__file__)+"/imgs")==False:
-        os.mkdir(dirname(__file__)+"/imgs")
-    img_path=dirname(__file__)+'/imgs/%s.png'%title
-    browser = await launch(options={"args":['--no-sandbox',"--start-maximized",'--user-agent=Mozilla/5.0 (Linux; Android 9; SKW-A0 Build/SKYW2001110CN00MP7; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 T7/11.19 SP-engine/2.15.0 baiduboxapp/11.19.5.10 (Baidu; P1 9)']})
+    if not os.path.exists(dirname(__file__) + "/imgs"):
+        os.mkdir(dirname(__file__) + "/imgs")
+    img_path = dirname(__file__) + '/imgs/%s.png' % title
+    browser = await launch(options={"args": ['--no-sandbox', "--start-maximized", '--user-agent=Mozilla/5.0 (Linux; '
+                                                                                  'Android 9; SKW-A0 '
+                                                                                  'Build/SKYW2001110CN00MP7; wv) '
+                                                                                  'AppleWebKit/537.36 (KHTML, '
+                                                                                  'like Gecko) Version/4.0 '
+                                                                                  'Chrome/76.0.3809.89 Mobile '
+                                                                                  'Safari/537.36 T7/11.19 '
+                                                                                  'SP-engine/2.15.0 '
+                                                                                  'baiduboxapp/11.19.5.10 (Baidu; P1 '
+                                                                                  '9)']})
     page = await browser.newPage()
     # 加载指定的网页url
     await page.goto(url)
@@ -33,8 +42,10 @@ async def save_image(url, title):
     return img_path
     # save_image(url, img_path)
 
+
 if __name__ == '__main__':
     import os
     import asyncio
+
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(save_image('http://sxwjw.shaanxi.gov.cn/sy/wjyw/202112/t20211223_2205338.html','test'))
+    loop.run_until_complete(save_image('http://sxwjw.shaanxi.gov.cn/sy/wjyw/202112/t20211223_2205338.html', 'test'))
